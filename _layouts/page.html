@@ -14,8 +14,9 @@ layout: default
 
 
     {{ content }}
+    {% if page.img %}
     <img src="/assets/img/{{ page.img.small }}{{ prepend: site.baseurl }}" alt="{{ page.img.alt }}">
-    
+    {% endif %}
 
   </article>
 
