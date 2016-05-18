@@ -1,3 +1,12 @@
+# Site settings
+
+title: Dhrupad
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Classical North Indian temple and court music of the Dagar tradition
+baseurl: "/a1" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
 # Build settings
 
 markdown: kramdown
