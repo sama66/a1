@@ -31,3 +31,5 @@ _site/
 ### Sass ###
 .sass-cache/
 *.css.map
+
+test.md
