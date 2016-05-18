@@ -12,7 +12,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 markdown: kramdown
 permalink: pretty
 
-port: 3000
+port: 4000
 
 sass:
   sass_dir: assets/css
