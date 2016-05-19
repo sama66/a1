@@ -218,10 +218,38 @@ body {
   -webkit-tap-highlight-color: #FFF498; }
 
 body {
-  background: #F6F6F8;
+  background: #777;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Open Sans" sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+header {
+  width: 140px;
+  background: white;
+  padding: 1px 0 30px; }
+  header .logo {
+    height: 135px;
+    margin: 2px;
+    background-image: url(/assets/img/dhrupad-logo.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+    header .logo h1 {
+      visibility: hidden;
+      margin: 0; }
+  header nav ul {
+    list-style: none;
+    margin: 20px 0;
+    text-align: right;
+    padding: 0 20px 0 0; }
+    header nav ul li {
+      margin-bottom: 5px; }
+      header nav ul li:last-child {
+        margin-bottom: 0; }
+  header .email-link {
+    display: block;
+    text-align: right;
+    padding-right: 20px; }
