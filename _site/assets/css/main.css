@@ -149,7 +149,7 @@ td, th {
   src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #bd5248;
+  color: #BD5248;
   font-weight: bold; }
 
 .gigantic {
@@ -188,14 +188,14 @@ strong {
   font-weight: bold; }
 
 hr {
-  border: solid #dddddd;
+  border: solid #ddd;
   border-width: 1px 0 0;
   clear: both;
   margin: 10px 0 30px;
   height: 0; }
 
 a {
-  color: #bd5248;
+  color: #BD5248;
   text-decoration: none;
   outline: 0; }
 
@@ -203,10 +203,10 @@ a:hover, a:focus {
   color: #d89993; }
 
 ::selection {
-  background: #fff498; }
+  background: #FFF498; }
 
 ::-moz-selection {
-  background: #fff498; }
+  background: #FFF498; }
 
 img::selection {
   background: transparent; }
@@ -215,13 +215,120 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #fff498; }
+  -webkit-tap-highlight-color: #FFF498; }
 
 body {
-  background: #f6f6f8;
+  background: #777;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Open Sans" sans-serif;
-  color: #2e2d33;
+  color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh; }
+  .container header {
+    width: 140px;
+    background: white;
+    padding: 1px 0 30px; }
+    .container header .header-position {
+      position: fixed;
+      top: 3px;
+      left: 0;
+      bottom: 30px;
+      width: 137px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    .container header .logo {
+      height: 135px;
+      margin: 2px;
+      max-width: 135px;
+      background-image: url(/assets/img/dhrupad-logo.gif);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+      .container header .logo h1 {
+        visibility: hidden;
+        margin: 0; }
+    .container header nav ul {
+      list-style: none;
+      margin: 20px 0;
+      text-align: right;
+      padding: 0 20px 0 0; }
+      .container header nav ul li {
+        margin-bottom: 5px; }
+        .container header nav ul li:last-child {
+          margin-bottom: 0; }
+    .container header .email-link {
+      display: block;
+      text-align: right;
+      padding-right: 20px; }
+    .container header .mobile-nav-toggle {
+      display: none; }
+
+@media (max-width: 775px) {
+  .container {
+    width: auto;
+    display: block; }
+    .container header {
+      width: auto;
+      padding: 5px; }
+      .container header .header-position {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        width: auto;
+        flex-direction: row; }
+      .container header nav, .container header .email-link {
+        display: none; }
+      .container header .logo {
+        height: 55px;
+        display: block;
+        width: 55px; }
+      .container header .mobile-nav-toggle {
+        width: 55px;
+        height: 55px;
+        display: block;
+        margin: 5px;
+        cursor: pointer; }
+        .container header .mobile-nav-toggle span,
+        .container header .mobile-nav-toggle span:before,
+        .container header .mobile-nav-toggle span:after {
+          content: "";
+          display: block;
+          background: #333;
+          height: 7px;
+          width: 100%;
+          position: relative;
+          transition: all 0.5s ease-in-out; }
+        .container header .mobile-nav-toggle span {
+          top: 8px; }
+        .container header .mobile-nav-toggle span:before {
+          top: 16px; }
+        .container header .mobile-nav-toggle span:after {
+          top: 27px; }
+      .container header:hover span {
+        background: transparent;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .container header:hover span:before {
+        background: red;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+        top: 20px; }
+      .container header:hover span:after {
+        background: crimson;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate(315deg);
+        transform: rotate(315deg);
+        top: 15px; } }
