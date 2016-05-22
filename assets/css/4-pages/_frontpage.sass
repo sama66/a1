@@ -1,36 +1,133 @@
-header
-	width: 140px
-	background: white
-	padding: 1px 0 30px
+.container
+	display: -webkit-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	min-height: 100vh
 
-	.logo
-		height: 135px
-		margin: 2px
-		background: 
-			image: url(/assets/img/dhrupad-logo.gif)
-			repeat: no-repeat
-			position: center
-			size: contain
+	header
+		width: 140px
+		background: white
+		padding: 1px 0 30px
+		.header-position
+			position: fixed
+			top: 3px
+			left: 0
+			bottom: 30px
+			width: 137px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
 
-		h1
-			visibility: hidden
-			margin: 0
 
-	nav 
-		ul 
-			list-style: none
-			margin: 20px 0
+		.logo
+			height: 135px
+			margin: 2px
+			max-width: 135px
+			background: 
+				image: url(/assets/img/dhrupad-logo.gif)
+				repeat: no-repeat
+				position: center
+				size: contain
+
+			h1
+				visibility: hidden
+				margin: 0
+
+		nav 
+			ul 
+				list-style: none
+				margin: 20px 0
+				text-align: right
+				padding: 0 20px 0 0
+
+
+				li 
+					margin-bottom: 5px
+
+					&:last-child
+						margin-bottom: 0
+		.email-link
+			display: block
 			text-align: right
-			padding: 0 20px 0 0
+			padding-right: 20px
 
-			li 
-				margin-bottom: 5px
+		.mobile-nav-toggle
+			display: none
 
-				&:last-child
-					margin-bottom: 0
-	.email-link
+
+
+@media (max-width: 775px)
+	.container
+		width: auto
 		display: block
-		text-align: right
-		padding-right: 20px
 
-		
+		header
+			width: auto
+			padding: 5px
+
+			.header-position
+				position: relative
+				top: auto
+				bottom: auto
+				left: auto
+				width: auto
+				flex-direction: row
+
+
+			nav, .email-link
+				display: none 
+
+			.logo
+				height: 55px
+				display: block
+				width: 55px
+
+			.mobile-nav-toggle
+				width: 55px
+				height: 55px
+				display: block
+				margin: 5px
+				cursor: pointer
+
+				span, 
+				span:before, 
+				span:after
+					content: ""
+					display: block
+					background: #333
+					height: 7px
+					width: 100%
+					position: relative
+
+					transition: all 0.5s ease-in-out
+
+
+				span
+					top: 8px
+				span:before
+					top: 16px
+				span:after
+					top: 27px
+			&:hover
+				span
+					background: transparent
+					-webkit-transform: rotate(45deg)
+					transform: rotate(45deg)
+
+				span:before
+					background: red
+					-webkit-transform-origin: center
+					transform-origin: center
+					-webkit-transform: rotate(225deg)
+					transform: rotate(225deg)
+					top: 20px
+				span:after
+					background: crimson
+					-webkit-transform-origin: center
+					transform-origin: center
+					-webkit-transform: rotate(315deg)
+					transform: rotate(315deg)
+					top: 15px
+
+					
