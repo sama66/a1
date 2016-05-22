@@ -23,7 +23,7 @@ $RECYCLE.BIN/
 
 
 ### Jekyll ###
-_site/
+
 .sass-cache/
 .jekyll-metadata
 README.md

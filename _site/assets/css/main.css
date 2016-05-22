@@ -231,7 +231,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: blue; }
   .container header {
     width: 140px;
     background: white;
